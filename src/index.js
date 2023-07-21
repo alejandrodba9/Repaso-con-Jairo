@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Agrega from './objetosavanzados/ObjetosAvanzados'
+import {Contador, Lista, Saludo1} from './React/CreacionComponentes/creacioncomponentes'
+import { Color, Reloj } from './React/EstadosReact/estados';
 
+
+const array = ["pollo","carne","higado","pescado"]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='principal'>
+      <Saludo1 nombre={'Alejandro'}/>
+      <Agrega/>
+      <Contador/>
+      <Lista items={array}/>
+      <Color/>
+      <Reloj/>
+    </div>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
